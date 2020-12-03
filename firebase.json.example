@@ -1,0 +1,31 @@
+{
+  "functions": {
+    "predeploy": [
+      "yarn --cwd \"$RESOURCE_DIR\" run lint",
+      "yarn --cwd \"$RESOURCE_DIR\" run build"
+    ]
+  },
+  "hosting": {
+    "public": "public/dist",
+    "predeploy": [
+      "yarn --cwd \"$RESOURCE_DIR\" run lint",
+      "yarn --cwd \"$RESOURCE_DIR\" run build"
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/items/*",
+        "destination": "/items/id.html"
+      },
+      {
+        "source": "/get_item",
+        "function": "get_item"
+      }
+    ]
+  }
+}
