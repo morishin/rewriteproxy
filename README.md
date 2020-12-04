@@ -2,7 +2,7 @@
 
 Emulator of Firebase Hosting [_rewrites_](https://firebase.google.com/docs/hosting/full-config#rewrites) for your development environment.
 
-## Examples
+## Features
 
 ### Rewrite path
 
@@ -31,6 +31,8 @@ It emulates this: https://firebase.google.com/docs/hosting/full-config#rewrites
 ```sh
 $ go get github.com/morishin/rewriteproxy
 ```
+
+or you can use standalone binary: https://github.com/morishin/rewriteproxy/releases/latest
 
 ## Usage
 
